@@ -1,9 +1,7 @@
 #pragma once
+#include <vector>
 
-struct charSrc
-{
-	char lowerCase[26] = { 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z' };
-	char upperCase[26] = { 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z' };
-	char numbers[10] = { '1','2','3','4','5','6','7','8','9','0' };
-	char special[8] = { '!', '@', '#', '$', '%', '^', '&', '*' };
-};
+std::vector<char> charLowerCase = { 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z' };
+std::vector<char> charUpperCase = { 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z' };
+std::vector<char> numbers = { '1','2','3','4','5','6','7','8','9','0' };
+std::vector<char> special = { '!', '@', '#', '$', '%', '^', '&', '*' };

@@ -28,6 +28,10 @@ void startMenu(bool &running)
 	{
 		try {
 			int passwordLength = std::stoi(tokens[0]);
+			if (passwordLength < 8)
+			{
+				throw 20;
+			}
 			generatePassword(passwordLength);
 		}
 		catch (std::invalid_argument)
@@ -37,6 +41,10 @@ void startMenu(bool &running)
 		catch (std::out_of_range)
 		{
 			std::cout << "Password length is out of range.\n";
+		}
+		catch (int e)
+		{
+			std::cout << "Password must have at least 8 characters.\n";
 		}
 	}
 

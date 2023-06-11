@@ -2,7 +2,5 @@
 #include <iostream>
 #include <vector>
 
-void setSeed();
-int getRandomNum();
-char pickChar(char *charArray, int size);
+char pickChar(std::vector<char> charVector);
 void generatePassword(int passwordLength);
