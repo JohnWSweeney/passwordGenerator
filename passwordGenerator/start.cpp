@@ -24,6 +24,12 @@ void startMenu(bool &running)
 	{
 		running = false;
 	}
+	else if (tokens[0] == "wall")
+	{
+		int wallOfTextLength = 1000000;
+		std::string wallOfText = generatePassword(wallOfTextLength, 2);
+		std::cout << wallOfText;
+	}
 	else
 	{
 		try {
@@ -32,7 +38,11 @@ void startMenu(bool &running)
 			{
 				throw 20;
 			}
-			generatePassword(passwordLength);
+			std::string randPassword = generatePassword(passwordLength, 1);
+			std::string rand_sPassword = generatePassword(passwordLength, 2);
+			std::cout << "\nPRNG:\t\tPassword:\n";
+			std::cout << "rand\t\t" << randPassword << '\n';
+			std::cout << "rand_s\t\t" << rand_sPassword << '\n';
 		}
 		catch (std::invalid_argument)
 		{

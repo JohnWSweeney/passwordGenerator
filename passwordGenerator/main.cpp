@@ -2,7 +2,7 @@
 
 int main()
 {
-	std::cout << "passwordGenerator v1.0.1\n";
+	std::cout << "passwordGenerator v1.1.0\n";
 	
 	bool running = true;
 	while (running)
