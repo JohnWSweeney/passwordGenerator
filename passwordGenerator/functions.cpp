@@ -35,7 +35,6 @@ std::string generatePassword(int passwordLength, int randomType)
 				tempChar = special[index];
 			}
 		} while (tempChar == prevChar || temp == prevtemp);
-		//} while (tempChar == prevChar);
 		password.push_back(tempChar);
 		prevChar = tempChar;
 		prevtemp = temp;

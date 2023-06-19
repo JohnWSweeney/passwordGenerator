@@ -17,18 +17,12 @@ void getInput(std::vector < std::string> &tokens)
 
 void startMenu(bool &running)
 {
-	std::cout << "\nHow many characters do you want your password to have?\n";
+	std::cout << "How many characters do you want your password to have?\n";
 	std::vector<std::string> tokens;
 	getInput(tokens);
 	if (tokens[0] == "exit")
 	{
 		running = false;
-	}
-	else if (tokens[0] == "wall")
-	{
-		int wallOfTextLength = 1000000;
-		std::string wallOfText = generatePassword(wallOfTextLength, 3);
-		std::cout << wallOfText;
 	}
 	else
 	{
@@ -40,11 +34,13 @@ void startMenu(bool &running)
 			}
 			std::string randPassword = generatePassword(passwordLength, 1);
 			std::string rand_sPassword = generatePassword(passwordLength, 2);
-			std::string mtPassword = generatePassword(passwordLength, 3);
+			std::string mt32Password = generatePassword(passwordLength, 3);
+			std::string mt64Password = generatePassword(passwordLength, 5);
 			std::cout << "\nPRNG:\t\tPassword:\n";
 			std::cout << "rand\t\t" << randPassword << '\n';
 			std::cout << "rand_s\t\t" << rand_sPassword << '\n';
-			std::cout << "mt19937\t\t" << mtPassword << '\n';
+			std::cout << "mt19937\t\t" << mt32Password << '\n';
+			std::cout << "mt19937_64\t" << mt64Password << "\n\n";
 		}
 		catch (std::invalid_argument)
 		{
@@ -59,6 +55,4 @@ void startMenu(bool &running)
 			std::cout << "Password must have at least 8 characters.\n";
 		}
 	}
-
-	
 }
